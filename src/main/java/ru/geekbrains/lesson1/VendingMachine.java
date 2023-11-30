@@ -11,16 +11,16 @@ public class VendingMachine implements VendingAutomat {
         this.products = products;
     }
 
-    public MilkBottle SaleMilk(BigDecimal price, Double volume, Double fat) {
+    public Milk SaleMilk(BigDecimal price, Double volume, Double fat) {
 
         for (Product product : products) {
-            if (product instanceof MilkBottle) {
-                MilkBottle milkBottle = (MilkBottle) product;
-                if (milkBottle.getPrice().doubleValue() == price.doubleValue() 
-                    && milkBottle.getVolume().doubleValue() == volume.doubleValue() 
-                    && milkBottle.getFat().doubleValue() == fat.doubleValue()) {
+            if (product instanceof Milk) {
+                Milk milk = (Milk) product;
+                if (milk.getPrice().doubleValue() == price.doubleValue()
+                    && milk.getVolume().doubleValue() == volume.doubleValue()
+                    && milk.getFat().doubleValue() == fat.doubleValue()) {
 
-                        return milkBottle;
+                        return milk;
 
                 }
             }
@@ -54,7 +54,7 @@ public class VendingMachine implements VendingAutomat {
 
         Product result;
         for (Product product : products) {
-            if (product instanceof MilkBottle) {
+            if (product instanceof Milk) {
 
                 result = SaleMilk(price, volume, fat);
                 if (result != null) {

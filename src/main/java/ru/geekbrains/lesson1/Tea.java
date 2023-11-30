@@ -29,6 +29,11 @@ public class Tea extends HotDrink{
         super(volume);
     }
 
+    public Tea(String name, String brand, BigDecimal price, Double volume, int temperature, Colors color, TypeOfPackage typeOfPackage) {
+        super(name, brand, price, volume, typeOfPackage);
+        this.temperature = temperature;
+        this.color = color;
+    }
     public Tea(String name, String brand, BigDecimal price, Double volume, int temperature, Colors color) {
         super(name, brand, price, volume);
         this.temperature = temperature;
@@ -58,7 +63,7 @@ public class Tea extends HotDrink{
 
     @Override
     public String toString() {
-        return String.format("name=%s, brand=%s, color=%s, price=%.2f, volume=%.1f, temperature=%d", name, brand, color, price, volume, temperature);
+        return String.format("name=%s, brand=%s, color=%s, price=%.2f, volume=%.1f, temperature=%d, package=%s", name, brand, color, price, volume, temperature, typeOfPackage);
     }
 
     
