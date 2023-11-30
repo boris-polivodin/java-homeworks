@@ -7,7 +7,7 @@ public final class App {
     private App() {
     }
 
-    public static void launchLesson1(String[] args) {
+    public static void main(String[] args) {
 
         Product milkBottle1 = new MilkBottle();
         Product milkBottle5 = new MilkBottle(1d, 2.5);

@@ -7,6 +7,7 @@ public class Product {
     protected String name;
     protected String brand;
     protected BigDecimal price;
+    protected TypeOfPackage typeOfPackage;
 
     public String getName() {
         return name;
@@ -26,6 +27,13 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+    public void setTypeOfPackage(TypeOfPackage typeOfPackage) {
+        this.typeOfPackage = typeOfPackage;
+    }
+    public TypeOfPackage getTypeOfPackage() {
+        return typeOfPackage;
+    }
+
     public Product() {
         setDefaultValues();
     }
