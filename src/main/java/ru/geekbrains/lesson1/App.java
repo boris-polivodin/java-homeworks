@@ -19,7 +19,6 @@ public final class App {
         milk.setName("Молоко");
         milk.setBrand("Родимая сторонка");
         milk.setPrice(new BigDecimal(119.99));
-        milk.setTypeOfPackage(TypeOfPackage.BOTTLE);
         
         ArrayList<Product> products = new ArrayList<>();
         products.add(milkBottle1);
@@ -37,7 +36,6 @@ public final class App {
         greenTea.setName("Чай зеленый китайcкий");
         greenTea.setBrand("China");
         greenTea.setPrice(new BigDecimal(99.99));
-        greenTea.setTypeOfPackage(TypeOfPackage.BOX);
 
         products.add(blackTea);
         products.add(greenTea);
