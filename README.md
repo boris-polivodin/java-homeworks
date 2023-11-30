@@ -1,3 +1,5 @@
 ## JAVA-HOMEWORKS
 
-first line change in local repository
+first line change in local repo
+
+new line from remote repo
