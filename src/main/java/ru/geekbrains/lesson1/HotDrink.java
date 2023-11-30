@@ -14,10 +14,6 @@ public class HotDrink extends Product {
         this.volume = volume;
     }
 
-    public HotDrink(String name, String brand, BigDecimal price, Double volume, TypeOfPackage typeOfPackage) {
-        super(name, brand, price, typeOfPackage);
-        this.volume = volume;
-    }
     public HotDrink(String name, String brand, BigDecimal price, Double volume) {
         super(name, brand, price);
         this.volume = volume;

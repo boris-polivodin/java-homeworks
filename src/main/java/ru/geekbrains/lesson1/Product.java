@@ -51,13 +51,6 @@ public class Product {
         this.brand = brand;
         this.price = price;
     }
-    public Product(String name, String brand, BigDecimal price, TypeOfPackage typeOfPackage) {
-        this.name = name;
-        this.brand = brand;
-        this.price = price;
-        this.typeOfPackage = typeOfPackage;
-    }
-
 
     private void setDefaultValues() {
         name = "product";
@@ -67,7 +60,7 @@ public class Product {
     
     @Override
     public String toString() {
-        return "Product [name=" + name + ", brand=" + brand + ", price=" + price + ", package= " + typeOfPackage +"]";
+        return "Product [name=" + name + ", brand=" + brand + ", price=" + price + "]";
     }
 
     

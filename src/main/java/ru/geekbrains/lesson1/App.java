@@ -9,16 +9,16 @@ public final class App {
 
     public static void main(String[] args) {
 
-        Product milkBottle1 = new Milk();
-        Product milkBottle5 = new Milk(1d, 2.5);
-        Product milkBottle4 = new Milk("Молоко неизвестного происхождения", 1.5, 3.2);
-        Product milkBottle2 = new Milk("Молоко без цены", "ГринАгро", 2d, 3.5);
-        Product milkBottle3 = new Milk("Молоко натуральное", "Деревенское", new BigDecimal(100), 1d, 4d);
+        Product milkBottle1 = new MilkBottle();
+        Product milkBottle5 = new MilkBottle(1d, 2.5);
+        Product milkBottle4 = new MilkBottle("Молоко неизвестного происхождения", 1.5, 3.2);
+        Product milkBottle2 = new MilkBottle("Молоко без цены", "ГринАгро", 2d, 3.5);
+        Product milkBottle3 = new MilkBottle("Молоко натуральное", "Деревенское", new BigDecimal(100), 1d, 4d);
 
-        Milk milk = (Milk) milkBottle5;
-        milk.setName("Молоко");
-        milk.setBrand("Родимая сторонка");
-        milk.setPrice(new BigDecimal(119.99));
+        MilkBottle milkBottle = (MilkBottle) milkBottle5;
+        milkBottle.setName("Молоко");
+        milkBottle.setBrand("Родимая сторонка");
+        milkBottle.setPrice(new BigDecimal(119.99));
         
         ArrayList<Product> products = new ArrayList<>();
         products.add(milkBottle1);
@@ -43,7 +43,7 @@ public final class App {
 
         VendingMachine vendingMachine = new VendingMachine(products);
 
-        Product product = vendingMachine.getProduct(milk.getName(), milk.getBrand(), milk.getPrice(), milk.getVolume(), milk.getFat(), 0, null);
+        Product product = vendingMachine.getProduct(milkBottle.getName(), milkBottle.getBrand(), milkBottle.getPrice(), milkBottle.getVolume(), milkBottle.getFat(), 0, null);
         if (product == null) {
             System.out.println("Нет такого товара.");
         } else {
